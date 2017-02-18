@@ -15,6 +15,7 @@ environment:
 
   matrix:
     - TARGET_ARCH: x64
+      CONDA_R-BASE: 3.3.2
       CONDA_PY: 27
       CONDA_INSTALL_LOCN: C:\\Miniconda-x64
 
