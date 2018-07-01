@@ -13,22 +13,22 @@ source:
 
 build:
   number: 0
-  skip: True  # [win32]
+  skip: True
   script: R CMD INSTALL --build .
   rpaths:
     - lib/R/lib/
     - lib/
 
-requirements:  # [not win32]
-  build:  # [not win32]
-    - r-base  # [not win32]
-    - posix  # [win64]
-    - m2w64-toolchain  # [win64]
+requirements:
+  build:
+    - r-base
+    - posix  # [win]
+    - m2w64-toolchain  # [win]
     - gcc  # [not win]
-    - r-matrix  # [not win32]
-  run:  # [not win32]
-    - r-base  # [not win32]
-    - r-matrix  # [not win32]
+    - r-matrix
+  run:
+    - r-base
+    - r-matrix
 
 test:
   commands:
