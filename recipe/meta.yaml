@@ -1,4 +1,4 @@
-{% set version = "2.42-4" %}
+{% set version = "2.42-6" %}
 
 package:
   name: r-survival
@@ -9,7 +9,7 @@ source:
   url:
     - http://cran.r-project.org/src/contrib/survival_{{ version }}.tar.gz
     - http://cran.r-project.org/src/contrib/Archive/survival/survival_{{ version }}.tar.gz
-  sha256: 678266668ac956538ab18f9ec45509b501e090bacaa6f58e41fcaa8c4d36db3e
+  sha256: e33c44ee95961ff3c1bd1afe040d3059c143a72387d8e47fdbeba61c9d605daf
 
 build:
   number: 0

@@ -14,9 +14,9 @@ Summary: Contains the core survival analysis routines, including definition of S
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-survival-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-survival-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-survival-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-survival-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-survival-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-survival-feedstock/branch/master)
+![Linux disabled](https://img.shields.io/badge/linux-disabled-lightgrey.svg)
+![OSX disabled](https://img.shields.io/badge/OSX-disabled-lightgrey.svg)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
