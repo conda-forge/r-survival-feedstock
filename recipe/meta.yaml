@@ -1,4 +1,4 @@
-{% set version = '2.42-6' %}
+{% set version = '2.43-3' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,14 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: survival_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/survival_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/survival/survival_{{ version }}.tar.gz
-  sha256: e33c44ee95961ff3c1bd1afe040d3059c143a72387d8e47fdbeba61c9d605daf
+  sha256: 996ccd1430b1d997ed1015c58260a15a94b9e5a9ef2d0a580c96c8169494b951
 
 build:
   merge_build_host: True  # [win]
-  number: 1001
-  skip: true  # [win32]
+  number: 1000
   rpaths:
     - lib/R/lib/
     - lib/
@@ -50,12 +48,29 @@ about:
     and Aalen-Johansen (multi-state) curves, Cox models, and parametric accelerated
     failure time models.
   license_family: LGPL
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2'
 
 extra:
   recipe-maintainers:
-    - ocefpaf
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
+    - conda-forge/r
+
+# Title: Survival Analysis
+# Maintainer: Terry M Therneau <therneau.terry@mayo.edu>
+# Priority: recommended
+# Package: survival
+# Version: 2.43-3
+# Date: 2018-11-13
+# Depends: R (>= 2.13.0)
+# Imports: graphics, Matrix, methods, splines, stats, utils
+# LazyData: Yes
+# LazyLoad: Yes
+# ByteCompile: Yes
+# Authors@R: c(person(c("Terry", "M"), "Therneau", email="therneau.terry@mayo.edu", role=c("aut", "cre")), person("Thomas", "Lumley", role=c("ctb", "trl"), comment="original S->R port and R maintainer until 2009"))
+# Description: Contains the core survival analysis routines, including definition of Surv objects,  Kaplan-Meier and Aalen-Johansen (multi-state) curves, Cox models, and parametric accelerated failure time models.
+# License: LGPL (>= 2)
+# URL: https://github.com/therneau/survival
+# NeedsCompilation: yes
+# Packaged: 2018-11-26 16:26:23 UTC; therneau
+# Author: Terry M Therneau [aut, cre], Thomas Lumley [ctb, trl] (original S->R port and R maintainer until 2009)
+# Repository: CRAN
+# Date/Publication: 2018-11-26 23:00:03 UTC
