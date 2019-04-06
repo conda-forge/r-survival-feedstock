@@ -1,4 +1,4 @@
-{% set version = '2.43-3' %}
+{% set version = '2.44-1.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/survival_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/survival/survival_{{ version }}.tar.gz
-  sha256: 996ccd1430b1d997ed1015c58260a15a94b9e5a9ef2d0a580c96c8169494b951
+  sha256: 55b151e15fcd24ccb3acf60331c9a7ad82bc10f3841ab3be9bc2a37e9ee751b9
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -58,8 +58,8 @@ extra:
 # Maintainer: Terry M Therneau <therneau.terry@mayo.edu>
 # Priority: recommended
 # Package: survival
-# Version: 2.43-3
-# Date: 2018-11-13
+# Version: 2.44-1.1
+# Date: 2019-03-27
 # Depends: R (>= 2.13.0)
 # Imports: graphics, Matrix, methods, splines, stats, utils
 # LazyData: Yes
@@ -70,7 +70,7 @@ extra:
 # License: LGPL (>= 2)
 # URL: https://github.com/therneau/survival
 # NeedsCompilation: yes
-# Packaged: 2018-11-26 16:26:23 UTC; therneau
+# Packaged: 2019-04-01 08:25:51 UTC; ripley
 # Author: Terry M Therneau [aut, cre], Thomas Lumley [ctb, trl] (original S->R port and R maintainer until 2009)
 # Repository: CRAN
-# Date/Publication: 2018-11-26 23:00:03 UTC
+# Date/Publication: 2019-04-01 08:42:36 UTC
