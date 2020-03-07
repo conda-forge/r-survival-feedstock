@@ -1,4 +1,4 @@
-{% set version = "3.1-8" %}
+{% set version = "3.1-11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/survival_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/survival/survival_{{ version }}.tar.gz
-  sha256: cecf393e8e27df79f3bf4aa7bc186d161f0e4b46a8572504e6eb80c09027d295
+  sha256: 44f6120ff977ac576b8fa15c0626dfef8d80ba392dc03364b5e15dbb465d70b9
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -44,11 +44,10 @@ test:
 about:
   home: https://github.com/therneau/survival
   license: LGPL (>= 2)
-  summary: Contains the core survival analysis routines, including definition of Surv objects,  Kaplan-Meier
-    and Aalen-Johansen (multi-state) curves, Cox models, and parametric accelerated
-    failure time models.
+  summary: Contains the core survival analysis routines, including definition of Surv objects,  Kaplan-Meier and Aalen-Johansen (multi-state) curves, Cox models,
+    and parametric accelerated failure time models.
   license_family: LGPL
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2
 
 extra:
   recipe-maintainers:
