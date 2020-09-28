@@ -3,7 +3,7 @@ About r-survival
 
 Home: https://github.com/therneau/survival
 
-Package license: LGPL (>= 2)
+Package license: LGPL-2.0-or-later
 
 Feedstock license: BSD-3-Clause
 
