@@ -43,10 +43,11 @@ test:
 
 about:
   home: https://github.com/therneau/survival
-  license: LGPL (>= 2)
+  license: LGPL-2.0-or-later
   summary: Contains the core survival analysis routines, including definition of Surv objects,  Kaplan-Meier and Aalen-Johansen (multi-state) curves, Cox models, and parametric accelerated failure time models.
   license_family: LGPL
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2
 
 extra:
   recipe-maintainers:
