@@ -3,6 +3,7 @@ About r-survival-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-survival-feedstock/blob/main/LICENSE.txt)
 
+
 About r-survival
 ----------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/therneau/survival
 Package license: LGPL-2.0-or-later
 
 Summary: Contains the core survival analysis routines, including definition of Surv objects,  Kaplan-Meier and Aalen-Johansen (multi-state) curves, Cox models, and parametric accelerated failure time models.
+
 About r-survival
 ----------------
 
