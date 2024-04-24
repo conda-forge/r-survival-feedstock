@@ -1,4 +1,4 @@
-{% set version = "3.5-8" %}
+{% set version = "3.6-4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/survival_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/survival/survival_{{ version }}.tar.gz
-  sha256: 71edf845a26714d206430b7fce91901d4d0774640ad8a46ca3b2022008df18b4
+  sha256: 2ef8aa244781d4ec3844812b4341934b2a51d0e988f9a8ea0561b27fa9c6eefe
 
 build:
   merge_build_host: true  # [win]
@@ -24,7 +24,9 @@ requirements:
     - cross-r-base {{ r_base }}  # [build_platform != target_platform]
     - r-matrix                   # [build_platform != target_platform]
     - {{ compiler('c') }}        # [not win]
+    - {{ stdlib("c") }}          # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("c") }}                # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
